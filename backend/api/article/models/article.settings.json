@@ -30,8 +30,8 @@
       "required": true
     },
     "category": {
-      "model": "category",
-      "via": "articles"
+      "via": "articles",
+      "model": "category"
     },
     "image": {
       "model": "file",
@@ -48,6 +48,9 @@
     "author": {
       "via": "articles",
       "model": "writer"
+    },
+    "imageUrl": {
+      "type": "string"
     }
   }
 }
