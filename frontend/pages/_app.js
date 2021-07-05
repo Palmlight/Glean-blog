@@ -1,9 +1,9 @@
 import App from "next/app"
 import Head from "next/head"
 import { createContext } from "react"
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 import "tailwindcss/tailwind.css"
 import "../assets/css/style.css"
-import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { getStrapiMedia } from "../lib/media"
 import { fetchAPI } from "../lib/api"
 

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Carousel } from "react-responsive-carousel"
 import Articles from "../components/articles"
 import CarouselCard from "../components/CarouselCard/CarouselCard"
@@ -9,14 +9,22 @@ import Link from "next/link"
 import { FiArrowRight } from "react-icons/fi"
 
 const Home = ({ articles, categories, homepage }) => {
+  const [mainWidth, setMainWidth] = useState(0)
   const carouselArticles = articles.slice().reverse().slice(0, 5)
+
+  useEffect(() => {
+    setMainWidth(window.innerWidth - document.body.clientWidth)
+  }, [])
+
+  console.log(mainWidth)
+
   return (
     <Layout categories={categories}>
       <Seo seo={homepage.seo} />
       <div className="global-layout">
         <div
-          className="w-full h-auto mx-auto overflow-hidden"
-          style={{ maxWidth: "100vw" }}
+          className="hero-carousel"
+          style={{ width: `calc(100vw - ${mainWidth}px)` }}
         >
           <Carousel
             autoPlay="true"
@@ -25,7 +33,6 @@ const Home = ({ articles, categories, homepage }) => {
             dynamicHeight={true}
             showStatus={false}
             showThumbs={false}
-            className="w-full"
             transitionTime={500}
           >
             {carouselArticles.map((a, i) => (
