@@ -16,7 +16,7 @@ const Home = ({ articles, categories, homepage }) => {
     setMainWidth(window.innerWidth - document.body.clientWidth)
   }, [])
 
-  console.log(mainWidth)
+  console.log(articles)
 
   return (
     <Layout categories={categories}>
