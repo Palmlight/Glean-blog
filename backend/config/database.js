@@ -1,6 +1,4 @@
-module.exports = ({ env }) => {
-  console.log(env('DATABASE_URI'));
-  return {
+module.exports = ({ env }) => ({
   defaultConnection: 'default',
   connections: {
     default: {
@@ -19,4 +17,4 @@ module.exports = ({ env }) => {
       },
     },
   },
-}};
+});
