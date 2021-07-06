@@ -1,1 +1,1 @@
-web: yarn backend/develop
+web: sh -c 'cd ./backend/ && yarn develop'
