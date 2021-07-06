@@ -9,7 +9,6 @@ module.exports = ({ env }) => ({
         srv: env.bool('DATABASE_SRV', true),
         port: env('DATABASE_PORT', 27017),
         database: env('DATABASE_NAME'),
-        // filename: env('DATABASE_FILENAME', '.tmp/data.db'),
       },
       options: {
         authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
