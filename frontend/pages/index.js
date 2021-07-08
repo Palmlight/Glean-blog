@@ -11,6 +11,7 @@ import { FiArrowRight } from "react-icons/fi"
 const Home = ({ articles, categories, homepage }) => {
   const [mainWidth, setMainWidth] = useState(0)
   const carouselArticles = articles.slice().reverse().slice(0, 5)
+  const indexArticles = articles.slice().reverse().slice(0, 15)
 
   useEffect(() => {
     setMainWidth(window.innerWidth - document.body.clientWidth)
@@ -51,7 +52,7 @@ const Home = ({ articles, categories, homepage }) => {
                 </a>
               </Link>
             </div>
-            <Articles articles={articles} />
+            <Articles articles={indexArticles} />
           </div>
         </div>
       </div>

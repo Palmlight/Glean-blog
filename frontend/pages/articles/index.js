@@ -3,13 +3,16 @@ import { fetchAPI } from "../../lib/api"
 import Articles from "../../components/articles"
 import Layout from "../../components/GlobalLayout/layout"
 import Seo from "../../components/seo"
+import Hero from "../../components/Heros/Hero"
 
 const Index = ({ articles, categories, homepage }) => {
+  const fullArticles = articles.slice().reverse()
   return (
     <Layout categories={categories}>
       <Seo seo={homepage.seo} />
+      <Hero name="Articles" />
       <div className="global-layout">
-        <Articles articles={articles} />
+        <Articles articles={fullArticles} />
       </div>
     </Layout>
   )

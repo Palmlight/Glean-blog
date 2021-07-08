@@ -8,7 +8,7 @@ const CarouselCard = ({ article }) => {
       <div
         className="h-50vh lg:h-70vh min-h-l-hero bg-no-repeat bg-center bg-cover py-10 lg:py-20 flex items-end"
         style={{
-          backgroundImage: `url(${article.imageUrl})`,
+          backgroundImage: `url(${article.image})`,
           maxHeight: 1200
         }}
       >

@@ -19,3 +19,7 @@
   overflow-x: hidden;
   width: 100%;
 } */
+
+.wiggle {
+  background-image: url("../images/wiggle.svg");
+}

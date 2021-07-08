@@ -2,6 +2,7 @@ import Articles from "../../components/articles"
 import { fetchAPI } from "../../lib/api"
 import Layout from "../../components/GlobalLayout/layout"
 import Seo from "../../components/seo"
+import Hero from "../../components/Heros/Hero"
 
 const Category = ({ category, categories }) => {
   const seo = {
@@ -12,11 +13,9 @@ const Category = ({ category, categories }) => {
   return (
     <Layout categories={categories}>
       <Seo seo={seo} />
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
-          <h1>{category.name}</h1>
-          <Articles articles={category.articles} />
-        </div>
+      <div className="w-full">
+        <Hero name={category.name} />
+        <Articles articles={category.articles} />
       </div>
     </Layout>
   )

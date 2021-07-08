@@ -1,7 +1,7 @@
 import { defaults } from "./constants"
 
 export function getStrapiURL(path = "") {
-  return `${defaults.baseUrl || "http://localhost:1337"}${path}`
+  return `${"http://localhost:1338" || defaults.baseUrl}${path}`
 }
 
 // Helper to make GET requests to Strapi
