@@ -6,13 +6,25 @@ import Seo from "../../components/seo"
 import { GoPrimitiveDot } from "react-icons/go"
 import {
   AiOutlineInstagram,
+  AiOutlineWhatsApp,
   AiFillFacebook,
   AiOutlineTwitter
 } from "react-icons/ai"
-// import { DiscussionEmbed } from "disqus-react"
+import { DiscussionEmbed } from "disqus-react"
+import { useRouter } from "next/router"
+import { useEffect, useState } from "react"
 
 const Article = ({ article, categories }) => {
-  const imageUrl = article.image
+  const [location, setLocation] = useState("")
+  useEffect(() => {
+    setLocation(window.location.href)
+  }, [])
+
+  const disqusConfig = {
+    url: location,
+    identifier: article.id,
+    title: article.title
+  }
 
   const seo = {
     metaTitle: article.title,
@@ -47,9 +59,17 @@ const Article = ({ article, categories }) => {
 
               <div className="flex items-center space-x-2">
                 <p>SHARE</p>
-                <AiOutlineTwitter className="text-2xl text-gl-green" />
-                <AiFillFacebook className="text-2xl text-gl-green" />
-                <AiOutlineInstagram className="text-2xl text-gl-green" />
+                <a href={`https://twitter.com/share?text=${location}`}>
+                  <AiOutlineTwitter className="text-2xl text-gl-green" />
+                </a>
+                <a
+                  href={`https://www.facebook.com/sharer.php?u=${location}&quote=${article.title}`}
+                >
+                  <AiFillFacebook className="text-2xl text-gl-green" />
+                </a>
+                <a href={`https://wa.me/?text=${location}`}>
+                  <AiOutlineWhatsApp className="text-2xl text-gl-green" />
+                </a>
               </div>
             </div>
 
@@ -69,8 +89,10 @@ const Article = ({ article, categories }) => {
               <ReactMarkdown
                 source={article.content}
                 escapeHtml={false}
-                className="text-lg text-justify"
+                className="text-lg text-justify mb-10"
               />
+
+              <DiscussionEmbed config={disqusConfig} shortname="glean-2" />
             </div>
           </div>
           <div className="w-80 h-40vh rounded-lg border-4 border-dashed  border-gray-300 px-5 items-center justify-center hidden lg:flex">

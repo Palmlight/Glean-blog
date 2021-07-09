@@ -16,7 +16,7 @@ const CarouselCard = ({ article }) => {
             {article.category.name}{" "}
             {/* <span className="carousel-name">&#8226; {article.readTime}</span> */}
           </h2>
-          <h1 className="text-white text-4xl font-semibold w-1/2 truncate">
+          <h1 className="text-white text-4xl font-semibold w-10/12 lg:w-1/2 truncate">
             {article.title}
           </h1>
           <Link as={`/article/${article.slug}`} href="/article/[id]">

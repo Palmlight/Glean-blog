@@ -47,7 +47,7 @@ const Nav = ({ categories }) => {
         )}
       </nav>
       {openMenu && (
-        <div className="mobile-nav fixed bg-black w-full top-20 left-0 bottom-0 right-0">
+        <div className="mobile-nav lg:hidden fixed bg-black w-full top-20 left-0 bottom-0 right-0">
           <div className="inner-container py-10">
             <ul className="flex-col flex gap-10 ">
               {categories.map(category => {

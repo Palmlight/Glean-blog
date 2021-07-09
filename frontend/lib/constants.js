@@ -1,3 +1,3 @@
 export const defaults = {
-  baseUrl: "https://glean-blog.herokuapp.com/"
+  baseUrl: "https://glean-blog.herokuapp.com"
 }
