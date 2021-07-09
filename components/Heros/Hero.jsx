@@ -5,7 +5,7 @@ const Hero = ({ name }) => {
     <div
       className="w-full bg-black h-20vh bg-cover bg-center bg-no-repeat wiggle mb-10"
       style={{
-        minHeight: 200
+        minHeight: 250
       }}
     >
       <div className="inner-container flex h-full items-center">
