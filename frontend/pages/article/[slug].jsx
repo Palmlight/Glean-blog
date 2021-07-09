@@ -3,6 +3,13 @@ import Moment from "react-moment"
 import { fetchAPI } from "../../lib/api"
 import Layout from "../../components/GlobalLayout/layout"
 import Seo from "../../components/seo"
+import { GoPrimitiveDot } from "react-icons/go"
+import {
+  AiOutlineInstagram,
+  AiFillFacebook,
+  AiOutlineTwitter
+} from "react-icons/ai"
+// import { DiscussionEmbed } from "disqus-react"
 
 const Article = ({ article, categories }) => {
   const imageUrl = article.image
@@ -17,44 +24,60 @@ const Article = ({ article, categories }) => {
   return (
     <Layout categories={categories}>
       <Seo seo={seo} />
-      <div className="w-full mt-14">
+      <div className="w-full mt-5 lg:mt-10">
         <div className="inner-container flex gap-9">
           <div className="w-full">
-            <h1 className="w-8/12 leading-relaxed text-3xl font-semibold">
+            <h1 className="lg:w-8/12 leading-relaxed text-3xl font-semibold">
               {article.title}
             </h1>
 
-            <div className="my-3 "></div>
+            <div className="my-3 flex items-center justify-between">
+              <div className="flex items-center">
+                <h1 className="text-gl-green uppercase font-semibold">
+                  {article.category.name}
+                </h1>
+
+                <p className="text-gray-400 flex items-center ml-3">
+                  <GoPrimitiveDot className="mr-1 h-3" />
+                  <Moment format="MMM Do YYYY" className="ml-0">
+                    {article.published_at}
+                  </Moment>
+                </p>
+              </div>
+
+              <div className="flex items-center space-x-2">
+                <p>SHARE</p>
+                <AiOutlineTwitter className="text-2xl text-gl-green" />
+                <AiFillFacebook className="text-2xl text-gl-green" />
+                <AiOutlineInstagram className="text-2xl text-gl-green" />
+              </div>
+            </div>
+
+            <div className="w-full">
+              <img
+                src={article.image}
+                className="w-full h-auto object-cover my-3"
+                style={{ maxHeight: 600 }}
+              />
+
+              <div className="w-80 h-20vh rounded-lg border-4 mx-auto border-dashed  border-gray-300 px-5 items-center justify-center flex lg:hidden">
+                <p className="text-center">
+                  Contact for advert bookings and placement
+                </p>
+              </div>
+
+              <ReactMarkdown
+                source={article.content}
+                escapeHtml={false}
+                className="text-lg text-justify"
+              />
+            </div>
           </div>
-          <div className="w-80 h-40vh rounded-lg border-4 border-dashed  border-gray-300"></div>
-        </div>
-      </div>
-      <div className="uk-section">
-        <div className="uk-container uk-container-small">
-          <ReactMarkdown source={article.content} escapeHtml={false} />
-          <hr className="uk-divider-small" />
-          {/* <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
-            <div>
-              {article.author.picture && (
-                <Image
-                  image={article.author.picture}
-                  style={{
-                    position: "static",
-                    borderRadius: "50%",
-                    height: 30
-                  }}
-                />
-              )}
-            </div>
-            <div className="uk-width-expand">
-              <p className="uk-margin-remove-bottom">
-                By {article.author.name}
-              </p>
-              <p className="uk-text-meta uk-margin-remove-top">
-                <Moment format="MMM Do YYYY">{article.published_at}</Moment>
-              </p>
-            </div>
-          </div> */}
+          <div className="w-80 h-40vh rounded-lg border-4 border-dashed  border-gray-300 px-5 items-center justify-center hidden lg:flex">
+            <p className="text-center">
+              Contact for advert bookings and placement
+            </p>
+          </div>
         </div>
       </div>
     </Layout>

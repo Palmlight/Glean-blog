@@ -23,3 +23,7 @@
 .wiggle {
   background-image: url("../images/wiggle.svg");
 }
+
+.mobile-nav {
+  height: calc(100vh - 72px);
+}

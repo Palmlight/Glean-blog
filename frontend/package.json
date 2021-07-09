@@ -12,6 +12,8 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.3",
+    "disqus-react": "^1.1.1",
     "moment": "^2.24.0",
     "next": "^9.5.4",
     "react": "16.13.1",
