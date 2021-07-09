@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_pages",
+  "info": {
+    "name": "AboutPage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "missionUrl": {
+      "type": "string"
+    },
+    "visionUrl": {
+      "type": "string"
+    },
+    "mission": {
+      "type": "text"
+    },
+    "vision": {
+      "type": "text"
+    }
+  }
+}
