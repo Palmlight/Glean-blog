@@ -5,7 +5,9 @@ const Layout = ({ children, categories, seo }) => (
   <div className="grid min-h-screen min-w-full layout">
     <Nav categories={categories} />
 
-    <div className="mt-20">{children}</div>
+    <div className="" style={{ marginTop: "88px" }}>
+      {children}
+    </div>
 
     <Footer />
   </div>

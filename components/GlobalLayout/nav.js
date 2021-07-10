@@ -7,15 +7,15 @@ import { AiOutlineClose } from "react-icons/ai"
 const Nav = ({ categories }) => {
   const [openMenu, setOpenMenu] = useState(false)
   return (
-    <div className="w-full fixed top-0 left-0 right-0 font-WorkSans bg-white z-30">
-      <nav className=" flex inner-container items-center justify-between py-5 relative">
+    <div className="w-full fixed top-0 left-0 right-0 font-WorkSans bg-white z-30 shadow-md">
+      <nav className=" flex inner-container items-center justify-between py-5 relative ">
         <Link href="/" as="/">
           {/* <a className="text-gl-green font-bold text-2xl hover:no-underline hover:text-gl-green">
             GLEAN WELLNESS
           </a> */}
 
           <img
-            className="h-8 w-auto"
+            className="h-12 w-auto"
             src="https://res.cloudinary.com/glean-wellness/image/upload/v1625767635/Article%20Images/WhatsApp_Image_2021-07-08_at_18.55.58_i6ezuq.jpg"
           />
         </Link>

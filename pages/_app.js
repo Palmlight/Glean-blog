@@ -31,6 +31,10 @@ const MyApp = ({ Component, pageProps }) => {
           href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
           rel="stylesheet"
         />
+        <meta
+          name="google-site-verification"
+          content="xGS71wiR7nGEYmaUPew1ZFTpWRG7sDtcsiEU-_qjK8M"
+        />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js" />
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js" />
