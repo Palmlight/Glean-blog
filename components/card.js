@@ -17,7 +17,7 @@ const Card = ({ article }) => {
               id="category"
               className="text-gl-green uppercase text-sm font-bold my-2"
             >
-              {article.category.name}
+              {article.category?.name}
             </p>
             <p id="title">{truncateString(article.title, 29)}</p>
           </div>

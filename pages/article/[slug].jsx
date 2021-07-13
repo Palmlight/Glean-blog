@@ -5,13 +5,11 @@ import Layout from "../../components/GlobalLayout/layout"
 import Seo from "../../components/seo"
 import { GoPrimitiveDot } from "react-icons/go"
 import {
-  AiOutlineInstagram,
   AiOutlineWhatsApp,
   AiFillFacebook,
   AiOutlineTwitter
 } from "react-icons/ai"
 import { DiscussionEmbed } from "disqus-react"
-import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 
 const Article = ({ article, categories }) => {
@@ -29,7 +27,7 @@ const Article = ({ article, categories }) => {
   const seo = {
     metaTitle: article.title,
     metaDescription: article.description,
-    shareImage: article.image,
+    shareImage: article?.image,
     article: true
   }
 
@@ -40,13 +38,13 @@ const Article = ({ article, categories }) => {
         <div className="inner-container flex gap-9">
           <div className="w-full">
             <h1 className="lg:w-8/12 leading-relaxed text-3xl font-semibold">
-              {article.title}
+              {article?.title}
             </h1>
 
             <div className="my-3 flex items-center justify-between">
               <div className="flex items-center">
                 <h1 className="text-gl-green uppercase font-semibold">
-                  {article.category.name}
+                  {article.category?.name}
                 </h1>
 
                 <p className="text-gray-400 flex items-center ml-3">
