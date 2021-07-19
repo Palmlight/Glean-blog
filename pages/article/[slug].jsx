@@ -87,7 +87,7 @@ const Article = ({ article, categories }) => {
               <ReactMarkdown
                 source={article.content}
                 escapeHtml={false}
-                className="text-lg text-justify mb-10 space-y-2 font-serif text-black leading-snug"
+                className="text-lg mb-10 space-y-2 font-serif text-black leading-tight "
               />
 
               <DiscussionEmbed config={disqusConfig} shortname="glean-2" />
