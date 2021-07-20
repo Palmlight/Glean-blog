@@ -14,7 +14,7 @@ const Index = ({ categories, homepage, about }) => {
         <div className="grid lg:grid-cols-2 grid-cols-1 lg:items-center gap-5">
           <div className="text-justify">
             <h1 className="font-semibold text-2xl">We’re on a mission to...</h1>
-            <p className="mt-2">{about.mission}</p>
+            <p className="mt-2 font-WorkSans">{about.mission}</p>
           </div>
 
           <img src={about.missionUrl} className="lg:mx-auto" />
@@ -23,7 +23,7 @@ const Index = ({ categories, homepage, about }) => {
           <img src={about.visionUrl} className="lg:mx-auto" />
           <div className="text-justify">
             <h1 className="font-semibold text-2xl">Hi I'm Onyinye</h1>
-            <p className="mt-2">{about.vision}</p>
+            <p className="mt-2 font-WorkSans">{about.vision}</p>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ const CarouselCard = ({ article }) => {
   return (
     <div className="w-full">
       <div
-        className="h-30vh lg:h-40vh min-h-l-hero bg-no-repeat bg-center bg-cover py-10 lg:py-20 flex items-end"
+        className="h-50vh bg-no-repeat bg-center bg-cover py-10 lg:py-20 flex items-end"
         style={{
           backgroundImage: `url(${article.image})`,
           maxHeight: 1200

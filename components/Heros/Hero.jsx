@@ -9,7 +9,9 @@ const Hero = ({ name }) => {
       }}
     >
       <div className="inner-container flex h-full items-center">
-        <h1 className="font-bold text-3xl text-white capitalize">{name}</h1>
+        <h1 className="font-bold text-3xl text-white capitalize font-WorkSans">
+          {name}
+        </h1>
       </div>
     </div>
   )

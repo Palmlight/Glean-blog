@@ -32,7 +32,7 @@ module.exports = {
       },
       fontFamily: {
         WorkSans: ["Work Sans", "sans-serif"],
-        Time: ["Times New Roman", "sans-serif"]
+        Rale: ["Raleway", "sans-serif"]
       },
       textColor: {
         "gl-green": "#02B64A"

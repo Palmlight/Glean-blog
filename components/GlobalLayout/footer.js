@@ -6,13 +6,13 @@ import { FiInstagram } from "react-icons/fi"
 
 const Footer = () => {
   return (
-    <div className="place-self-end bg-black mt-20 py-10 w-full space-y-5">
+    <div className="place-self-end bg-black mt-20 py-10 w-full space-y-5 font-WorkSans">
       <div className="inner-container text-yellow-200 flex flex-col lg:flex-row justify-between items-center mb-5">
-        <p className="text-lg lg:text-2xl text-gl-green font-semibold">
+        <p className="text-lg lg:text-2xl text-gl-green font-semibold font-WorkSans">
           GLEAN WELLNESS
         </p>
 
-        <div className="flex gap-2 lg:gap-5 items-center flex-row mt-5 lg:mt-0">
+        <div className="flex gap-2 lg:gap-5 items-center flex-row mt-5 lg:mt-0 font-WorkSans">
           <Link href="/" as="/">
             <a className="text-white text-sm lg:text-lg font-semibold hover:no-underline hover:text-gl-green transition-all">
               Home
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-2 lg:mt-0">
-          <p className="text-white text-justify text-sm">
+          <p className="text-white text-justify text-sm font-WorkSans">
             Gleanwellness provides wellness management in an informational and
             educational manner only. Our content and services are intended to
             assist you and other readers in your lifestyle choices and personal

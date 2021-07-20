@@ -1,5 +1,5 @@
 * {
-  font-family: Work Sans;
+  font-family: Raleway;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -26,4 +26,8 @@
 
 .mobile-nav {
   height: calc(100vh - 72px);
+}
+
+.rale-font {
+  font-family: Raleway !important;
 }

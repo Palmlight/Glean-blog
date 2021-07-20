@@ -28,7 +28,7 @@ const MyApp = ({ Component, pageProps }) => {
           crossOrigin={true}
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Raleway&family=Work+Sans&display=swap"
           rel="stylesheet"
         />
         <meta

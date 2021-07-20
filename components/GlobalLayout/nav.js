@@ -7,7 +7,7 @@ import { AiOutlineClose } from "react-icons/ai"
 const Nav = ({ categories }) => {
   const [openMenu, setOpenMenu] = useState(false)
   return (
-    <div className="w-full fixed top-0 left-0 right-0 font-WorkSans bg-black text-white z-30 shadow-md">
+    <div className="w-full fixed top-0 left-0 right-0 font-WorkSans bg-white z-30 shadow-md">
       <nav className=" flex inner-container items-center justify-between py-5 relative ">
         <Link href="/" as="/">
           {/* <a className="text-gl-green font-bold text-2xl hover:no-underline hover:text-gl-green">
@@ -25,7 +25,7 @@ const Nav = ({ categories }) => {
             return (
               <li key={category.id}>
                 <Link as={`/category/${category.slug}`} href="/category/[id]">
-                  <a className="font-semibold text-base text-white hover:no-underline hover:text-gl-green transition-all">
+                  <a className="font-semibold text-base text-gray-700 hover:no-underline hover:text-gl-green transition-all font-WorkSans">
                     {category.name.toUpperCase()}
                   </a>
                 </Link>
@@ -47,7 +47,7 @@ const Nav = ({ categories }) => {
         )}
       </nav>
       {openMenu && (
-        <div className="mobile-nav lg:hidden fixed bg-black w-full top-20 left-0 bottom-0 right-0">
+        <div className="mobile-nav lg:hidden fixed bg-gray-800 w-full top-20 left-0 bottom-0 right-0">
           <div className="inner-container py-10">
             <ul className="flex-col flex gap-10 ">
               {categories.map(category => {
@@ -58,7 +58,7 @@ const Nav = ({ categories }) => {
                       href="/category/[id]"
                     >
                       <a
-                        className="font-semibold text-base text-gl-green hover:no-underline hover:text-gl-green transition-all"
+                        className="font-semibold text-base text-gl-green hover:no-underline hover:text-gl-green transition-all font-WorkSans"
                         onClick={() => setOpenMenu(false)}
                       >
                         {category.name.toUpperCase()}

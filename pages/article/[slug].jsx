@@ -37,19 +37,19 @@ const Article = ({ article, categories }) => {
       <div className="w-full mt-5 lg:mt-10">
         <div className="inner-container flex gap-9">
           <div className="w-full">
-            <h1 className="lg:w-8/12 leading-relaxed text-2xl font-semibold">
+            <h1 className="lg:w-8/12 leading-relaxed text-2xl font-semibold font-WorkSans">
               {article?.title}
             </h1>
 
             <div className="my-3 flex items-center justify-between">
               <div className="flex items-center">
-                <h1 className="text-gl-green uppercase font-semibold">
+                <h1 className="text-gl-green uppercase font-semibold font-WorkSans">
                   {article.category?.name}
                 </h1>
 
                 <p className="text-gray-400 flex items-center ml-3">
                   <GoPrimitiveDot className="mr-1 h-3" />
-                  <Moment format="MMM Do YYYY" className="ml-0">
+                  <Moment format="MMM Do YYYY" className="ml-0 font-WorkSans">
                     {article.published_at}
                   </Moment>
                 </p>
@@ -71,7 +71,7 @@ const Article = ({ article, categories }) => {
               </div>
             </div>
 
-            <div className="w-full">
+            <div className="w-full font-Rale">
               <img
                 src={article.image}
                 className="w-full h-auto object-cover my-3"
@@ -87,7 +87,7 @@ const Article = ({ article, categories }) => {
               <ReactMarkdown
                 source={article.content}
                 escapeHtml={false}
-                className="text-sm mb-10 space-y-2 text-black leading-tight font-Time "
+                className="mb-10 space-y-2 leading-snug text-black font-Rale rale-font "
               />
 
               <DiscussionEmbed config={disqusConfig} shortname="glean-2" />
