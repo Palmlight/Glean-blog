@@ -37,7 +37,7 @@ const Article = ({ article, categories }) => {
       <div className="w-full mt-5 lg:mt-10">
         <div className="inner-container flex gap-9">
           <div className="w-full">
-            <h1 className="lg:w-8/12 leading-relaxed text-3xl font-semibold">
+            <h1 className="lg:w-8/12 leading-relaxed text-2xl font-semibold">
               {article?.title}
             </h1>
 
@@ -75,7 +75,7 @@ const Article = ({ article, categories }) => {
               <img
                 src={article.image}
                 className="w-full h-auto object-cover my-3"
-                style={{ maxHeight: 600 }}
+                style={{ maxHeight: 300 }}
               />
 
               <div className="w-80 h-20vh rounded-lg border-4 mx-auto border-dashed  border-gray-300 px-5 items-center justify-center flex lg:hidden">
@@ -87,7 +87,7 @@ const Article = ({ article, categories }) => {
               <ReactMarkdown
                 source={article.content}
                 escapeHtml={false}
-                className="text-lg mb-10 space-y-2 font-serif text-black leading-tight "
+                className="text-sm mb-10 space-y-2 text-black leading-tight font-Time "
               />
 
               <DiscussionEmbed config={disqusConfig} shortname="glean-2" />

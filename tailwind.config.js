@@ -31,7 +31,8 @@ module.exports = {
         "l-hero": "600px"
       },
       fontFamily: {
-        WorkSans: ["Work Sans", "sans-serif"]
+        WorkSans: ["Work Sans", "sans-serif"],
+        Time: ["Times New Roman", "sans-serif"]
       },
       textColor: {
         "gl-green": "#02B64A"

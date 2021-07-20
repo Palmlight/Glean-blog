@@ -7,7 +7,7 @@ import { AiOutlineClose } from "react-icons/ai"
 const Nav = ({ categories }) => {
   const [openMenu, setOpenMenu] = useState(false)
   return (
-    <div className="w-full fixed top-0 left-0 right-0 font-WorkSans bg-white z-30 shadow-md">
+    <div className="w-full fixed top-0 left-0 right-0 font-WorkSans bg-black text-white z-30 shadow-md">
       <nav className=" flex inner-container items-center justify-between py-5 relative ">
         <Link href="/" as="/">
           {/* <a className="text-gl-green font-bold text-2xl hover:no-underline hover:text-gl-green">
@@ -25,7 +25,7 @@ const Nav = ({ categories }) => {
             return (
               <li key={category.id}>
                 <Link as={`/category/${category.slug}`} href="/category/[id]">
-                  <a className="font-semibold text-base text-gray-700 hover:no-underline hover:text-gl-green transition-all">
+                  <a className="font-semibold text-base text-white hover:no-underline hover:text-gl-green transition-all">
                     {category.name.toUpperCase()}
                   </a>
                 </Link>
