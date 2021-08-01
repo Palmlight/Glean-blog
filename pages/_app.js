@@ -17,10 +17,6 @@ const MyApp = ({ Component, pageProps }) => {
     <>
       <Head>
         <link rel="shortcut icon" href={global.favicon} />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css"
-        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -35,9 +31,11 @@ const MyApp = ({ Component, pageProps }) => {
           name="google-site-verification"
           content="xGS71wiR7nGEYmaUPew1ZFTpWRG7sDtcsiEU-_qjK8M"
         />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js" />
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js" />
+        <script
+          data-ad-client="ca-pub-2759040475568970"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        />
       </Head>
       <GlobalContext.Provider value={global}>
         <Component {...pageProps} />

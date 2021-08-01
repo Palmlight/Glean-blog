@@ -31,3 +31,7 @@
 .rale-font {
   font-family: Raleway !important;
 }
+
+img {
+  max-height: auto;
+}

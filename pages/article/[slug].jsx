@@ -37,7 +37,7 @@ const Article = ({ article, categories }) => {
       <div className="w-full mt-5 lg:mt-10">
         <div className="inner-container flex gap-9">
           <div className="w-full">
-            <h1 className="lg:w-8/12 leading-relaxed text-2xl font-semibold font-WorkSans">
+            <h1 className="lg:w-8/12 leading-relaxed text-3xl font-semibold font-WorkSans">
               {article?.title}
             </h1>
 

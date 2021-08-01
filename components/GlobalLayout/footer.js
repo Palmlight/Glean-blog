@@ -12,7 +12,7 @@ const Footer = () => {
           GLEAN WELLNESS
         </p>
 
-        <div className="flex gap-2 lg:gap-5 items-center flex-row mt-5 lg:mt-0 font-WorkSans">
+        <div className="flex gap-2 space-x-2 lg:space-x-3 lg:gap-5 items-center flex-row mt-5 lg:mt-0 font-WorkSans">
           <Link href="/" as="/">
             <a className="text-white text-sm lg:text-lg font-semibold hover:no-underline hover:text-gl-green transition-all">
               Home
@@ -37,7 +37,7 @@ const Footer = () => {
       </div>
 
       <div className=" inner-container grid grid-cols-1 lg:grid-cols-2 ">
-        <div className="flex gap-4 justify-center lg:justify-start">
+        <div className="flex gap-4 space-x-5 lg:space-x-0 justify-center lg:justify-start">
           <a href="https://pin.it/3wgLIvP">
             <FaPinterestP className="text-lg lg:text-2xl text-gl-green" />
           </a>
