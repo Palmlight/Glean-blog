@@ -12,6 +12,13 @@ export const GlobalContext = createContext({})
 
 const MyApp = ({ Component, pageProps }) => {
   const { global } = pageProps
+  window.dataLayer = window.dataLayer || []
+  function gtag() {
+    dataLayer.push(arguments)
+  }
+  gtag("js", new Date())
+
+  gtag("config", "G-K74D9ZTBZT")
 
   return (
     <>
@@ -23,6 +30,7 @@ const MyApp = ({ Component, pageProps }) => {
           href="https://fonts.gstatic.com"
           crossOrigin={true}
         />
+
         <link
           href="https://fonts.googleapis.com/css2?family=Raleway&family=Work+Sans&display=swap"
           rel="stylesheet"
@@ -36,6 +44,19 @@ const MyApp = ({ Component, pageProps }) => {
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         />
+
+        {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-K74D9ZTBZT"
+        ></script>
+        {/* <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K74D9ZTBZT');
+</script> */}
       </Head>
       <GlobalContext.Provider value={global}>
         <Component {...pageProps} />
