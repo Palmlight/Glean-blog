@@ -1,6 +1,6 @@
 import App from "next/app"
 import Head from "next/head"
-import { createContext } from "react"
+import { createContext, useEffect } from "react"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import "tailwindcss/tailwind.css"
 import "../assets/css/style.css"
@@ -12,13 +12,16 @@ export const GlobalContext = createContext({})
 
 const MyApp = ({ Component, pageProps }) => {
   const { global } = pageProps
-  window.dataLayer = window.dataLayer || []
-  function gtag() {
-    dataLayer.push(arguments)
-  }
-  gtag("js", new Date())
 
-  gtag("config", "G-K74D9ZTBZT")
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag("js", new Date())
+
+    gtag("config", "G-K74D9ZTBZT")
+  }, [])
 
   return (
     <>
