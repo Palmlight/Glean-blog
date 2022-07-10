@@ -1,3 +1,1 @@
-# Glean Wellness
-
-A quick description of your strapi application
+# This is a blog my Jenny
